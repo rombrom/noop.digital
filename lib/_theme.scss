@@ -1,0 +1,44 @@
+@use 'sass:map';
+
+$colors: (
+  'background': #fff1d6,
+  'foreground': #181b1f,
+  'black': #31373d,
+  'red': #f55c45,
+  'green': #afb833,
+  'yellow': #ebb242,
+  'blue': #5fb8b8,
+  'magenta': #cc7ab1,
+  'cyan': #6eb89f,
+  'grey': #9aaab8,
+  'dark-grey': #757d85,
+  'light-red': #f58c31,
+  'light-green': #d6d66f,
+  'light-yellow': #ffd37a,
+  'light-blue': #92d6d6,
+  'light-magenta': #eba0d2,
+  'light-cyan': #92d6bf,
+  'light-grey': #d8e2eb,
+);
+
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --color-foreground: #{map.get($colors, 'background')};
+    --color-background: #{map.get($colors, 'foreground')};
+  }
+
+  --gutter: 1rem;
+}
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .c-#{$name} {
+    color: $color;
+  }
+}

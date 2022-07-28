@@ -1,0 +1,66 @@
+@use 'sass:list';
+
+@import '_utils';
+@import '_reset';
+@import '_theme';
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: monospace;
+  line-height: 1.618;
+}
+
+body {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin: 0;
+}
+
+.container {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding: var(--gutter);
+  width: clamp(320px, 90%, 800px);
+}
+
+.logo {
+  @include text-gradient(
+    var(--color-red) 0 25%,
+    var(--color-light-red) 25% 50%,
+    var(--color-yellow) 50% 75%,
+    var(--color-light-yellow) 75% 100%
+  );
+
+  display: inline-block;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 5rem 0 3rem;
+}
+
+header {
+  border-bottom: solid 1px var(--color-black);
+  margin-bottom: 5rem;
+}
+
+footer {
+  border-top: solid 1px var(--color-black);
+  color: var(--color-dark-grey);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--gutter);
+  margin-top: 5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.copyright {
+  justify-self: center;
+  color: var(--color-black);
+}

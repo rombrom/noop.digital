@@ -1,0 +1,14 @@
+@use 'sass:list';
+
+@mixin text-gradient($stops...) {
+  $length: list.length($stops);
+
+  @if $length < 2 {
+    @warn "Cannot draw a gradient with #{$length} stops";
+  }
+
+  background-clip: text;
+  background-image: linear-gradient(to right, $stops);
+  box-decoration-break: clone;
+  color: transparent;
+}
