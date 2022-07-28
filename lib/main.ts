@@ -1,13 +1,5 @@
-export async function woot() {
-  const res = await 'foo';
+console.log('Hey internet person taking a peek here!');
 
-  const test = {
-    foo: 'bar',
-    quix: 'qox',
-  };
-
-  return res;
-}
-
-console.log('Hellow');
-console.log(await woot());
+setTimeout(() => {
+  console.log('Not much too see, huh?');
+}, 60000);
