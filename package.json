@@ -9,7 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "build": "concurrently -k npm:build:*",
+    "build": "concurrently --kill-others-on-fail npm:build:* \"sed 's#/dist##g' < index.html > dist/index.html\"",
     "build:css": "sass lib/main.scss | postcss > dist/main.css",
     "build:js": "tsc",
     "clean": "rm -rf dist",
