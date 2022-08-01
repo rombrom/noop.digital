@@ -4,6 +4,11 @@
 @import '_reset';
 @import '_theme';
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -12,6 +17,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin: 0;
 }
@@ -38,22 +45,22 @@ body {
 
 h1 {
   font-size: 5rem;
-  margin: 5rem 0 3rem;
+  margin: 5rem 0;
 }
 
 header {
-  border-bottom: solid 1px var(--color-black);
-  margin-bottom: 5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
-  border-top: solid 1px var(--color-black);
   color: var(--color-dark-grey);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--gutter);
-  margin-top: 5rem;
+  margin-top: auto;
 
   p {
     margin: 0;
