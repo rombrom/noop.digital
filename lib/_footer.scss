@@ -1,0 +1,17 @@
+footer {
+  color: var(--color-dark-grey);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--gutter);
+  margin-top: auto;
+
+  p {
+    margin: 0;
+  }
+}
+
+.copyright {
+  justify-self: center;
+  color: var(--color-black);
+}

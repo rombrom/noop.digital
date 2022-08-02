@@ -1,0 +1,23 @@
+.logo {
+  @include text-gradient(
+    var(--color-red) 0 25%,
+    var(--color-light-red) 25% 50%,
+    var(--color-yellow) 50% 75%,
+    var(--color-light-yellow) 75% 100%
+  );
+
+  display: inline-block;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 5rem 0;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

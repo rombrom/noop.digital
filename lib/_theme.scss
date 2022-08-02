@@ -42,3 +42,14 @@ $colors: (
     color: $color;
   }
 }
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: monospace;
+  line-height: 1.618;
+}
+
+body {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
