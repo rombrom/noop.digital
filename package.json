@@ -9,7 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "build": "mkdir dist && concurrently --kill-others-on-fail \"sed 's#/dist##g' < index.html > dist/index.html\" npm:build:*",
+    "build": "npm run clean && mkdir dist && concurrently --kill-others-on-fail \"sed 's#/dist##g' < index.html > dist/index.html\" npm:build:*",
     "build:css": "sass lib/main.scss | postcss > dist/main.css",
     "build:js": "tsc",
     "clean": "rm -rf dist",
@@ -17,7 +17,7 @@
     "dev:css": "sass lib/main.scss:dist/main.css --watch",
     "dev:serve": "sirv --dev .",
     "dev:ts": "tsc --declaration --sourceMap --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "sirv --host 0.0.0.0 ."
   },
   "keywords": [],
   "author": "",
@@ -34,9 +34,10 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.27",
     "postcss-cli": "^10.0.0",
     "postcss-preset-env": "^7.7.2",
+    "postcss-scss": "^4.0.6",
     "prettier": "^2.6.2",
     "sass": "^1.54.0",
     "sirv-cli": "^2.0.2",
