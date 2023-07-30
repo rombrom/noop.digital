@@ -1,8 +1,14 @@
 {
+  "env": {
+    "browser": true,
+    "node": true,
+    "shared-node-browser": true
+  },
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
+  "ignorePatterns": ["**/*.html"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -19,11 +25,6 @@
     "sort-keys-fix",
     "unused-imports"
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "shared-node-browser": true
-  },
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
     "prettier/prettier": ["error", { "singleQuote": true }],
