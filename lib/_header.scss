@@ -6,9 +6,19 @@
     var(--color-light-yellow) 75% 100%
   );
 
-  display: inline-block;
+  display: flex;
   font-family: monospace;
   font-weight: bold;
+
+  & > i {
+    color: inherit;
+    font-style: normal;
+    transition: transform 127ms ease-in-out;
+  }
+
+  &:hover > i {
+    transform: scaleY(-1) translateY(-10%);
+  }
 }
 
 h1 {
