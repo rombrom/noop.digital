@@ -7,11 +7,16 @@ aside {
   gap: var(--gutter);
   margin-top: 5rem;
 
-  h2 {
+  h3 {
+    color: var(--color-grey);
     font-size: inherit;
   }
 
   p {
     margin: 0;
+  }
+
+  address {
+    font-style: normal;
   }
 }

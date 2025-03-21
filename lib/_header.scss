@@ -1,9 +1,21 @@
 .logo {
+  --ch0: var(--color-red);
+  --ch1: var(--color-light-red);
+  --ch2: var(--color-yellow);
+  --ch3: var(--color-light-yellow);
+
+  @media (prefers-color-scheme: light) {
+    --ch0: var(--color-blue);
+    --ch1: var(--color-light-blue);
+    --ch2: var(--color-cyan);
+    --ch3: var(--color-light-cyan);
+  }
+
   @include text-gradient(
-    var(--color-red) 0 25%,
-    var(--color-light-red) 25% 50%,
-    var(--color-yellow) 50% 75%,
-    var(--color-light-yellow) 75% 100%
+    var(--ch0) 0 25%,
+    var(--ch1) 25% 50%,
+    var(--ch2) 50% 75%,
+    var(--ch3) 75% 100%
   );
 
   display: flex;
@@ -27,7 +39,6 @@ h1 {
 }
 
 header {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
