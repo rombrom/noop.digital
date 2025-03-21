@@ -10,6 +10,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && mkdir dist && concurrently --kill-others-on-fail \"sed 's#/dist##g' < index.html > dist/index.html\" npm:build:*",
+    "build:assets": "cp smirky.webp dist/smirky.webp",
     "build:css": "sass lib/main.scss | postcss > dist/main.css",
     "build:js": "tsc",
     "clean": "rm -rf dist",
