@@ -61,10 +61,15 @@ body {
 
 h2 {
   color: color('red');
+  text-transform: uppercase;
 }
 
 p {
   margin-block: 1.5rem;
+}
+
+summary {
+  color: var(--color-dark-grey);
 }
 
 a {
@@ -101,6 +106,10 @@ p > small:only-child {
 i,
 sup {
   color: var(--color-dark-grey);
+}
+
+section {
+  margin-block-start: 8rem;
 }
 
 .icon-utf8 {
